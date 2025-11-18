@@ -1,0 +1,14 @@
+#faq {
+    padding: 6rem 1.5rem;
+    background-color: white;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-container .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}

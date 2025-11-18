@@ -1,0 +1,79 @@
+/* Executive Board Section */
+#executive-board {
+    padding: 6rem 1.5rem;
+    background-color: #f9fafb;
+}
+
+.executive-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.executive-container .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.board-member {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    text-align: center;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 300px;
+}
+
+.board-member:hover {
+    border-color: #2563eb;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.board-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid #e5e7eb;
+}
+
+.board-member img:hover {
+    border-color: #2563eb;
+}
+
+.board-member h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.board-member p {
+    color: #6b7280;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #executive-board {
+        padding: 3rem 1rem;
+    }
+    
+    .board-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .board-member {
+        max-width: 100%;
+    }
+}
