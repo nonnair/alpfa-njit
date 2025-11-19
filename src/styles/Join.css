@@ -1,14 +1,14 @@
-#faq {
+#join {
     padding: 6rem 1.5rem;
     background-color: white;
 }
 
-.faq-container {
+.join-container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.faq-container .section-title {
+.join-container .section-title {
     text-align: center;
     margin-bottom: 3rem;
 }
