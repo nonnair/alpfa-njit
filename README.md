@@ -20,5 +20,4 @@ ALPFA NJIT is the official chapter website for the Association of Latino Profess
 ## 📬 Contact
 Email: alpfanjit@gmail.com  
 Instagram: @alpfa_njit  
-e)
 
