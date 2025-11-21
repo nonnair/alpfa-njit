@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Join.css'
 
-function JOIN() {
+function Join() {
   return (
     <section id="join">
       <div className="join-container">
