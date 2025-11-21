@@ -14,8 +14,9 @@ ALPFA NJIT is the official chapter website for the Association of Latino Profess
 ## Contributing
 1. Create a new branch: `git checkout -b feature-branch`
 2. Commit changes: `git commit -m "Add feature"`
-3. Push branch: `git push origin feature-branch`
-4. Open a **pull request** to develop for review
+3. Get new changes from main `git pull origin branchname` 
+4. Push branch: `git push origin feature-branch`
+5. Open a **pull request** to develop for review
 
 ## 📬 Contact
 Email: alpfanjit@gmail.com  
