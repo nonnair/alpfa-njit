@@ -61,6 +61,49 @@
 
 .footer-text {
     color: #9ca3af;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.footer-email {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-email:hover {
+    color: #2563eb;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-icon {
+    color: #9ca3af;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.alpfa-link {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.875rem;
+}
+
+.alpfa-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
 }
 
 .footer-bottom {
@@ -68,4 +111,5 @@
     padding-top: 2rem;
     text-align: center;
     color: #9ca3af;
+    font-size: 0.875rem;
 }
