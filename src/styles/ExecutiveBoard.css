@@ -1,79 +1,253 @@
 /* Executive Board Section */
-#executive-board {
-    padding: 6rem 1.5rem;
-    background-color: #f9fafb;
+.executive-board-section {
+  min-height: 100vh;
+  background-color: #0f102e;
+  padding: 4rem 3rem;
 }
 
 .executive-container {
-    max-width: 1280px;
-    margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.executive-container .section-title {
-    text-align: center;
-    margin-bottom: 3rem;
+.executive-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #ffffff;
 }
 
+/* Board Grid */
 .board-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
 }
 
-.board-member {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 12px;
-    border: 2px solid #e5e7eb;
-    text-align: center;
-    transition: all 0.3s;
-    width: 100%;
-    max-width: 300px;
+@media (min-width: 640px) {
+  .board-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.board-member:hover {
-    border-color: #2563eb;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+@media (min-width: 1024px) {
+  .board-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.board-member img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
-    border: 3px solid #e5e7eb;
+@media (min-width: 1280px) {
+  .board-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-.board-member img:hover {
-    border-color: #2563eb;
+/* Board Card */
+.board-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.board-member h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 0.5rem;
+.board-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
-.board-member p {
-    color: #6b7280;
-    font-weight: 500;
-    margin: 0;
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    #executive-board {
-        padding: 3rem 1rem;
-    }
-    
-    .board-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .board-member {
-        max-width: 100%;
-    }
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.member-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.member-title {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #2563eb;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 50;
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  max-width: 48rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: zoomIn 0.2s ease-in;
+  position: relative;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: #ffffff;
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .modal-inner {
+    flex-direction: row;
+  }
+}
+
+.modal-image-wrapper {
+  aspect-ratio: 3/4;
+}
+
+@media (min-width: 768px) {
+  .modal-image-wrapper {
+    width: 40%;
+    aspect-ratio: auto;
+  }
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-info {
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .modal-info {
+    width: 60%;
+    padding: 2.5rem;
+  }
+}
+
+.modal-name {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.modal-bio-section {
+  margin-bottom: 2rem;
+}
+
+.bio-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.bio-text {
+  color: #6b7280;
+  line-height: 1.625;
+}
+
+.modal-linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.modal-linkedin-button:hover {
+  background-color: #1d4ed8;
 }
