@@ -5,18 +5,13 @@
     box-shadow: none;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     z-index: 1000;
-
-    /* slower + smoother transitions */
-    transition:
-        background 0.6s ease,
-        box-shadow 0.6s ease,
-        width 0.6s ease,
-        margin 0.6s ease,
-        transform 0.6s ease,
-        border-radius 0.6s ease;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Navbar when scrolled - floating cloud effect */
@@ -28,8 +23,6 @@
     border-radius: 16px;
     width: 85%;
     max-width: 1000px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .navbar.scrolled::after {
@@ -45,11 +38,12 @@
     height: 20px;
     background: #0f102e;
     clip-path: ellipse(50% 100% at 50% 0%);
-    transition: opacity 0.6s ease;
+    opacity: 1;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled .nav-container {
-    height: 78px; /* bigger scrolled height */
+    height: 78px;
 }
 
 .nav-container {
@@ -60,9 +54,7 @@
     justify-content: space-between;
     align-items: center;
     height: 90px;
-
-    /* slower height animation */
-    transition: height 0.6s ease;
+    transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Logo Section */
@@ -83,16 +75,11 @@
     justify-content: center;
     position: relative;
     padding: 8px;
-
-    /* smooth + slow resize */
-    transition:
-        width 0.6s ease,
-        height 0.6s ease,
-        transform 0.3s ease;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled .logo {
-    width: 68px;   /* slightly bigger */
+    width: 68px;
     height: 68px;
 }
 
@@ -140,17 +127,11 @@
     border-radius: 8px;
     position: relative;
     display: block;
-
-    /* slower animations */
-    transition:
-        font-size 0.45s ease,
-        padding 0.45s ease,
-        color 0.55s ease,
-        background 0.55s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled .nav-links a {
-    font-size: 0.9rem; /* slightly bigger than before */
+    font-size: 0.9rem;
     padding: 0.55rem 0.85rem;
 }
 
@@ -161,7 +142,7 @@
     border-radius: 8px;
     background: rgba(59, 130, 246, 0.15);
     opacity: 0;
-    transition: opacity 0.55s ease;
+    transition: opacity 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -185,13 +166,7 @@
     box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
     position: relative;
     overflow: hidden;
-
-    /* slower button animation */
-    transition:
-        padding 0.55s ease,
-        font-size 0.55s ease,
-        transform 0.55s ease,
-        box-shadow 0.55s ease;
+    transition: padding 0.55s ease, font-size 0.55s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar.scrolled .btn-primary {
@@ -205,7 +180,7 @@
     inset: 0;
     background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 100%);
     opacity: 0;
-    transition: opacity 0.55s ease;
+    transition: opacity 0.3s ease;
 }
 
 .btn-primary:hover {

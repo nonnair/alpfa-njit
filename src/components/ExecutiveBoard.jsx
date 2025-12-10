@@ -105,7 +105,7 @@ function ExecutiveBoard() {
   };
 
   return (
-    <section className="executive-board-section">
+    <section id="executive-board-section" className="executive-board-section">
       <div className="executive-container">
         <h2 className="executive-title">Executive Board</h2>
         
