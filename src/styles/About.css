@@ -1,11 +1,14 @@
 /* Features Section - Moved from Home.css */
 .features-section {
     padding: 6rem 1.5rem;
+    background-color: #f9fafb;
 }
 
 .features-container {
     max-width: 1280px;
     margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .section-header {
@@ -13,52 +16,310 @@
     margin-bottom: 4rem;
 }
 
+.founded-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #3d4fc7 0%, #142aa6 50%, #0e1f7a 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    box-shadow: 
+        0 8px 16px rgba(20, 42, 166, 0.4),
+        0 4px 8px rgba(20, 42, 166, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.founded-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.founded-badge:hover::before {
+    left: 100%;
+}
+
+.founded-badge:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 
+        0 16px 32px rgba(20, 42, 166, 0.6),
+        0 8px 16px rgba(20, 42, 166, 0.5),
+        0 0 20px rgba(20, 42, 166, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    width: 100%;
 }
 
 .feature-card {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 12px;
-    border: 2px solid #e5e7eb;
-    transition: all 0.3s;
+    background-color: transparent;
+    perspective: 1000px;
+    height: 100%;
+    min-height: 450px;
 }
 
-.feature-card:hover {
-    border-color: #2563eb;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.feature-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+    background-color: #0a1759;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-back {
+    background-color: #0a1759;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
 }
 
 .feature-icon {
-    width: 56px;
-    height: 56px;
-    background-color: #dbeafe;
-    border-radius: 8px;
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
+    min-height: 180px;
+    max-width: 180px;
+    max-height: 180px;
+    background-color: white;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.75rem;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.feature-image {
+    width: 100%;
+    height: 100%;
+    min-width: 180px;
+    min-height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.feature-emoji {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .feature-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #111827;
-    margin-bottom: 1rem;
+    color: #ffffff;
+    margin-bottom: 0;
 }
 
 .feature-description {
-    color: #4b5563;
-    line-height: 1.7;
+    color: #e5e7eb;
+    line-height: 1.8;
+    font-size: 1.125rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        min-height: 400px;
+    }
+    
+    .feature-icon {
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+        min-height: 150px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+    
+    .feature-image {
+        min-width: 150px;
+        min-height: 150px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-description {
+        font-size: 1.125rem;
+    }
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+    .features-section {
+        padding: 3rem 1rem;
+    }
+    
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        min-height: 350px;
+    }
+    
+    .card-front,
+    .card-back {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon {
+        width: 140px;
+        height: 140px;
+        min-width: 140px;
+        min-height: 140px;
+        max-width: 140px;
+        max-height: 140px;
+    }
+    
+    .feature-image {
+        min-width: 140px;
+        min-height: 140px;
+    }
+    
+    .feature-title {
+        font-size: 1.25rem;
+    }
+    
+    .feature-description {
+        font-size: 0.9rem;
+    }
+    
+    .founded-badge {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+    }
+}
+
+/* Small mobile responsive */
+@media (max-width: 480px) {
+    .features-section {
+        padding: 2rem 1rem;
+    }
+    
+    .feature-card {
+        min-height: 300px;
+    }
+    
+    .card-front,
+    .card-back {
+        padding: 1.25rem;
+    }
+    
+    .feature-icon {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        min-height: 120px;
+        max-width: 120px;
+        max-height: 120px;
+    }
+    
+    .feature-image {
+        min-width: 120px;
+        min-height: 120px;
+    }
+    
+    .feature-title {
+        font-size: 1.125rem;
+    }
+    
+    .feature-description {
+        font-size: 0.875rem;
+    }
+    
+    .founded-badge {
+        font-size: 0.875rem;
+        padding: 0.625rem 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-description {
+        font-size: 0.9rem;
     }
 }
