@@ -11,13 +11,15 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-section">
             <div className="footer-brand">
-              <div className="footer-logo">ALPFA</div>
-              <span className="logo-text">NJIT</span>
+              <img src="./public/img/ALPFANJITLOGO.png" alt="ALPFA NJIT Logo" className="footer-logo" />
             </div>
             <p className="footer-text">
               Empowering students to reach their full potential in accounting, finance, and business.
+              &nbsp; 
             </p>
+            
           </div>
+          
           
           <div className="footer-section">
             <h4 className="footer-heading">Quick Links</h4>
@@ -51,14 +53,15 @@ function Footer() {
                 </svg>
               </a>
             </div>
-            <p className="footer-text">
+             <p className="footer-text">
               <a href="https://alpfa.org/" target="_blank" rel="noopener noreferrer" className="alpfa-link">ALPFA National Website</a>
             </p>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 ALPFA NJIT | Founded November 2024</p>
+          <p>&copy; 2024 ALPFA NJIT | 
+              Website designed by IT Committee 2025–2026.</p>
         </div>
       </div>
     </footer>

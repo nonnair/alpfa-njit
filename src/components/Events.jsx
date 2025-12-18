@@ -11,7 +11,7 @@ function Events() {
         
         <div className="calendar-container">
           <iframe 
-            src="https://calendar.google.com/calendar/embed?src=alpfanjit%40gmail.com&ctz=America%2FNew_York&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0"
+            src="https://calendar.google.com/calendar/embed?src=alpfanjit%40gmail.com&ctz=America%2FNew_York"
             className="google-calendar"
             frameBorder="0"
             scrolling="no"

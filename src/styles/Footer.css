@@ -1,7 +1,7 @@
 /* Footer */
 .footer {
-    background-color: #111827;
-    color: white;
+    background-color: white;
+    color: #0f102e;
     padding: 3rem 1.5rem;
 }
 
@@ -50,23 +50,23 @@
 }
 
 .footer-links a {
-    color: #9ca3af;
+    color: #0f102e;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: #0f102e;
 }
 
 .footer-text {
-    color: #9ca3af;
+    color: #0f102e;
     font-size: 0.875rem;
     line-height: 1.5;
 }
 
 .footer-email {
-    color: #9ca3af;
+    color: #0f102e;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -82,7 +82,7 @@
 }
 
 .social-icon {
-    color: #9ca3af;
+    color: #0f102e;
     transition: color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
@@ -95,7 +95,7 @@
 }
 
 .alpfa-link {
-    color: #9ca3af;
+    color: #0f102e;
     text-decoration: none;
     transition: color 0.3s;
     font-size: 0.875rem;
@@ -110,6 +110,6 @@
     border-top: 1px solid #374151;
     padding-top: 2rem;
     text-align: center;
-    color: #9ca3af;
+    color: #0f102e;
     font-size: 0.875rem;
 }

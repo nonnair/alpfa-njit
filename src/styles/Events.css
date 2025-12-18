@@ -1,22 +1,25 @@
 /* Events Section */
 #events {
     padding: 6rem 1.5rem;
-    background-color: #f9fafb;
+    background-color: #0f102e;
 }
 
 .events-container {
     max-width: 1280px;
     margin: 0 auto;
+    
+    color: white;
 }
 
 .events-container .section-title {
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .events-description {
     text-align: center;
-    color: #6b7280;
+    color: #ffffff;
     font-size: 1.125rem;
     max-width: 700px;
     margin: 0 auto 3rem;
@@ -44,12 +47,12 @@
 }
 
 .contact-card {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #6e1b2d 0%, #5a1524 100%);
     color: white;
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 10px 30px rgba(110, 27, 45, 0.2);
 }
 
 .contact-card h3 {
@@ -71,7 +74,7 @@
     align-items: center;
     gap: 0.75rem;
     background: white;
-    color: #2563eb;
+    color: #6e1b2d;
     padding: 0.875rem 1.75rem;
     border-radius: 8px;
     text-decoration: none;

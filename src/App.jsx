@@ -4,7 +4,6 @@ import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import Events from './components/Events.jsx';
 import ExecutiveBoard from './components/ExecutiveBoard.jsx';
-import Resources from './components/Resources.jsx';
 import Footer from './components/Footer.jsx';
 import Join from './components/Join.jsx';
 
@@ -43,7 +42,6 @@ function App() {
         <Events />
         <Join />
         <ExecutiveBoard />
-        <Resources />
       </main>
       <Footer />
     </div>
