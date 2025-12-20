@@ -11,7 +11,7 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-section">
             <div className="footer-brand">
-              <img src="public/img/ALPFANJITLOGO.png" alt="ALPFA NJIT Logo" className="footer-logo" />
+              <img src="img/ALPFANJITLOGO.png" alt="ALPFA NJIT Logo" className="footer-logo" />
             </div>
             <p className="footer-text">
               Empowering students to reach their full potential in accounting, finance, and business.

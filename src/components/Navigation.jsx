@@ -24,7 +24,7 @@ function Navigation() {
       <div className="nav-container">
         <div className="logo-section">
           <div className="logo">
-             <img src="/img/ALPFANJITLOGO.png" alt="ALPFA NJIT Logo" className="logo-image" />
+             <img src="img/ALPFANJITLOGO.png" alt="ALPFA NJIT Logo" className="logo-image" />
           </div>
         </div>
         
