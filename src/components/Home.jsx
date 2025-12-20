@@ -12,7 +12,7 @@ function Home() {
           <a href="#artists" className="hero-cta">Join the ALPFAmilia</a>
         </div>
         <div className="hero-image">
-          <img src="/img/DSC01955.jpg" alt="eboard-photo" />
+          <img src="img/DSC01955.jpg" alt="eboard-photo" />
         </div>
       </div>
     </section>
