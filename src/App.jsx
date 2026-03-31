@@ -6,6 +6,7 @@ import Events from './components/Events.jsx';
 import ExecutiveBoard from './components/ExecutiveBoard.jsx';
 import Footer from './components/Footer.jsx';
 import Join from './components/Join.jsx';
+import PointsWidget from './components/PointsWidget.jsx';
 
 function App() {
   useEffect(() => {
@@ -43,6 +44,7 @@ function App() {
         <Join />
         <ExecutiveBoard />
       </main>
+      <PointsWidget />
       <Footer />
     </div>
   );

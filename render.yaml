@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: alpfa-njit-api
+    env: python
+    rootDir: backend
+    plan: free
+    autoDeploy: true
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 server.py
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: DB_PATH
+        value: /var/data/alpfa_points.db
+    disk:
+      name: alpfa-data
+      mountPath: /var/data
+      sizeGB: 1
