@@ -1,0 +1,11 @@
+.legal-page {
+    /* Clear the expanded 90px navbar, its 20px edge, and leave a reading gap. */
+    padding: calc(110px + 2rem) 1.5rem 4rem;
+}
+
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}

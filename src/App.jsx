@@ -6,37 +6,73 @@ import Events from './components/Events.jsx';
 import ExecutiveBoard from './components/ExecutiveBoard.jsx';
 import Footer from './components/Footer.jsx';
 import Join from './components/Join.jsx';
-import PointsWidget from './components/PointsWidget.jsx';
+import Privacy from './components/Privacy.jsx';
+import Support from './components/Support.jsx';
 
 function App() {
   useEffect(() => {
     // Smooth scroll with offset for fixed navbar
     const handleAnchorClick = (e) => {
-      const href = e.target.getAttribute('href');
+      const href = e.target.closest('a')?.getAttribute('href');
+
       if (href && href.startsWith('#')) {
         e.preventDefault();
+
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
-        
+
         if (targetElement) {
-          const navbarHeight = 90; // Your navbar height
+          const navbarHeight = 90;
           const targetPosition = targetElement.offsetTop - navbarHeight;
-          
+
           window.scrollTo({
             top: targetPosition,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
       }
     };
 
     document.addEventListener('click', handleAnchorClick);
-    return () => document.removeEventListener('click', handleAnchorClick);
+
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+    };
   }, []);
 
+  // Current page
+  const path = window.location.pathname.replace(/\/+$/, '');
+
+  const isPrivacyPage = path.endsWith('/privacy');
+  const isSupportPage = path.endsWith('/support');
+
+  // Privacy page
+  if (isPrivacyPage) {
+    return (
+      <div className="app">
+        <Navigation />
+        <Privacy />
+        <Footer />
+      </div>
+    );
+  }
+
+  // Support page
+  if (isSupportPage) {
+    return (
+      <div className="app">
+        <Navigation />
+        <Support />
+        <Footer />
+      </div>
+    );
+  }
+
+  // Main website
   return (
     <div className="app">
       <Navigation />
+
       <main>
         <Home />
         <About />
@@ -44,7 +80,7 @@ function App() {
         <Join />
         <ExecutiveBoard />
       </main>
-      <PointsWidget />
+
       <Footer />
     </div>
   );

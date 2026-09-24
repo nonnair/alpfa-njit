@@ -1,6 +1,6 @@
-/* Navbar - starts transparent */
+/* Navbar */
 .navbar {
-    background: transparent;
+    background: #0f102e;
     border-bottom: none;
     box-shadow: none;
     position: fixed;
