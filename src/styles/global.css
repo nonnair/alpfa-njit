@@ -64,3 +64,6 @@ body {
         font-size: 2rem;
     }
 }
+section[id] {
+    scroll-margin-top: 110px;
+}

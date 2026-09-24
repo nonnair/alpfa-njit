@@ -16,12 +16,12 @@ function App() {
       const href = e.target.closest('a')?.getAttribute('href');
 
       if (href && href.startsWith('#')) {
-        e.preventDefault();
-
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
+          e.preventDefault();
+          window.history.pushState(null, '', href);
           const navbarHeight = 90;
           const targetPosition = targetElement.offsetTop - navbarHeight;
 
@@ -41,7 +41,7 @@ function App() {
   }, []);
 
   // Current page
-  const path = window.location.pathname.replace(/\/+$/, '');
+  const path = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/+$/, '');
 
   const isPrivacyPage = path.endsWith('/privacy');
   const isSupportPage = path.endsWith('/support');

@@ -100,7 +100,7 @@ function Support() {
             and permissions, read our Privacy Policy.
           </p>
 
-          <a href="./privacy">View Privacy Policy</a>
+          <a href={`${import.meta.env.BASE_URL}privacy/`}>View Privacy Policy</a>
         </section>
 
         <section>

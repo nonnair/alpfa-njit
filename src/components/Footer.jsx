@@ -10,7 +10,7 @@ function Footer() {
           <div className="footer-section">
             <div className="footer-brand">
               <img
-                src="img/ALPFANJITLOGO.png"
+                src={`${import.meta.env.BASE_URL}img/ALPFANJITLOGO.png`}
                 alt="ALPFA NJIT Logo"
                 className="footer-logo"
               />
@@ -26,9 +26,9 @@ function Footer() {
             <h4 className="footer-heading">Quick Links</h4>
 
             <ul className="footer-links">
-              <li><a href="/alpfa-njit/#about">About Us</a></li>
-              <li><a href="/alpfa-njit/#events">Events</a></li>
-              <li><a href="/alpfa-njit/#executive-board">Executive Board</a></li>
+              <li><a href={`${import.meta.env.BASE_URL}#about`}>About Us</a></li>
+              <li><a href={`${import.meta.env.BASE_URL}#events`}>Events</a></li>
+              <li><a href={`${import.meta.env.BASE_URL}#executive-board-section`}>Executive Board</a></li>
             </ul>
           </div>
 
@@ -37,13 +37,13 @@ function Footer() {
 
             <ul className="footer-links">
               <li>
-                <a href="/alpfa-njit/privacy">
+                <a href={`${import.meta.env.BASE_URL}privacy/`}>
                   Privacy Policy
                 </a>
               </li>
 
               <li>
-                <a href="/alpfa-njit/support">
+                <a href={`${import.meta.env.BASE_URL}support/`}>
                   App Support
                 </a>
               </li>
